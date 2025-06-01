@@ -1,31 +1,9 @@
 #include "MyForm1.h"
 #include "MyForm2.h"
+#include "Model/HeadRecord.cpp"
 #pragma once
 
-struct Record {
-
-	char tariff_plan[20];
-	float topic_price;
-	char discount[20];
-	char period_plan[50];
-	char name_owner[100];
-	int id_account;
-	char eic_code[40];
-	char adr_oblast[50];
-	char adr_city[30];
-	char adr_address[50];
-	char adr_home[20];
-	char subsides[5];
-	float overpay;
-	char date_overpay[20];
-	char status[20];
-
-};
-	
-
-
 namespace Course4 {
-
 	using namespace System;
 	using namespace System::ComponentModel;
 	using namespace System::Collections;
@@ -58,6 +36,7 @@ namespace Course4 {
 				delete components;
 			}
 		}
+
 	private: System::Windows::Forms::GroupBox^ groupBox1;
 	protected:
 	private: System::Windows::Forms::Button^ button2;
@@ -116,7 +95,7 @@ namespace Course4 {
 		/// <summary>
 		/// Required designer variable.
 		/// </summary>
-		void Filing_ListBoxes_by_Data(Record data[], int h, array<ListBox^>^ listBoxes) {
+		void Filing_ListBoxes_by_Data(HeadRecord data[], int h, array<ListBox^>^ listBoxes) {
 		
 		array<String^>^ rec_data = gcnew array<String^> {
 
@@ -273,7 +252,7 @@ namespace Course4 {
 			this->button3->Name = L"button3";
 			this->button3->Size = System::Drawing::Size(226, 40);
 			this->button3->TabIndex = 2;
-			this->button3->Text = L"History of used";
+			this->button3->Text = L"Resourse used";
 			this->button3->UseVisualStyleBackColor = true;
 			this->button3->Click += gcnew System::EventHandler(this, &MyForm::button3_Click);
 			// 
@@ -292,7 +271,7 @@ namespace Course4 {
 			this->button2->Name = L"button2";
 			this->button2->Size = System::Drawing::Size(226, 44);
 			this->button2->TabIndex = 1;
-			this->button2->Text = L"Calculations";
+			this->button2->Text = L"Payment history";
 			this->button2->UseVisualStyleBackColor = true;
 			this->button2->Click += gcnew System::EventHandler(this, &MyForm::button2_Click);
 			// 
@@ -312,7 +291,7 @@ namespace Course4 {
 			this->label1->AutoSize = true;
 			this->label1->Location = System::Drawing::Point(26, 52);
 			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(74, 29);
+			this->label1->Size = System::Drawing::Size(93, 36);
 			this->label1->TabIndex = 1;
 			this->label1->Text = L"Type:";
 			// 
@@ -699,7 +678,7 @@ namespace Course4 {
 			// 
 			this->toolStripStatusLabel1->BackColor = System::Drawing::SystemColors::ButtonFace;
 			this->toolStripStatusLabel1->Name = L"toolStripStatusLabel1";
-			this->toolStripStatusLabel1->Size = System::Drawing::Size(117, 27);
+			this->toolStripStatusLabel1->Size = System::Drawing::Size(117, 20);
 			this->toolStripStatusLabel1->Text = L"Made in Ukraine";
 			// 
 			// MyForm
@@ -755,7 +734,7 @@ namespace Course4 {
 
 		for each (ListBox^ lb in listBoxes) lb->Items->Clear();
 
-		Record data[] = {
+		HeadRecord data[] = {
 			{ "Fixed", 7.95689f, "Not provided", "01.05.2024 -- 30.04.2025", 
 			"Fadyev Anton Pertrovich", 200049200, "144EB551656XM20B5", "Khmel'nyts'ka", 
 			"Khmel'nyts'kyi", "Kam'yanets'ka 910", "Room 71", "Yes", 6.15f, "15.11.2024", "What" },

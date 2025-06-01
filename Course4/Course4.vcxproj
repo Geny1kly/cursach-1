@@ -121,9 +121,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="HeadRecord.cpp" />
+    <ClCompile Include="HistoryRecord.cpp" />
     <ClCompile Include="MyForm.cpp" />
     <ClCompile Include="MyForm1.cpp" />
     <ClCompile Include="MyForm2.cpp" />
+    <ClCompile Include="PriceRecord.cpp" />
+    <ClCompile Include="TariffsRepostiory.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="MyForm.h">

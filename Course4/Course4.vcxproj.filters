@@ -13,6 +13,12 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Source Files\Rep">
+      <UniqueIdentifier>{cfc6004e-cad7-4301-b298-2519ad7d29ff}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Model">
+      <UniqueIdentifier>{f59fed0f-d7ab-4956-ab96-e5c82db17594}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="MyForm.cpp">
@@ -23,6 +29,18 @@
     </ClCompile>
     <ClCompile Include="MyForm2.cpp">
       <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TariffsRepostiory.cpp">
+      <Filter>Source Files\Rep</Filter>
+    </ClCompile>
+    <ClCompile Include="HeadRecord.cpp">
+      <Filter>Source Files\Model</Filter>
+    </ClCompile>
+    <ClCompile Include="HistoryRecord.cpp">
+      <Filter>Source Files\Model</Filter>
+    </ClCompile>
+    <ClCompile Include="PriceRecord.cpp">
+      <Filter>Source Files\Model</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

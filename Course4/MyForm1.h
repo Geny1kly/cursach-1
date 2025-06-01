@@ -1,4 +1,5 @@
 #pragma once
+#include "Model/PriceRecord.cpp"
 
 namespace Course4 {
 
@@ -11,17 +12,6 @@ namespace Course4 {
     using namespace System::Windows::Forms::DataVisualization::Charting;
     using namespace System::Collections::Generic;
 
-    value struct GasTariff {
-        String^ date;
-        double monthlyTariff;
-        double yearlyTariff;
-		GasTariff(String^ initialDate, double initialMonthlyTariff, double initialYearlyTariff) {
-			date = initialDate;
-			monthlyTariff = initialMonthlyTariff;
-			yearlyTariff = initialYearlyTariff;
-        }
-
-    };
     public ref class MyForm1 : public System::Windows::Forms::Form
     {
     public:
@@ -265,22 +255,22 @@ namespace Course4 {
         }
 
 
-        List<GasTariff>^ tariffs = gcnew List<GasTariff>();
+        List<PriceRecord>^ tariffs = gcnew List<PriceRecord>();
 
         void initalize_tariffs() {
-			tariffs->Add(GasTariff("01.05.2019", 7556, 15199));
-			tariffs->Add(GasTariff("01.06.2019", 7020, 14855));
-			tariffs->Add(GasTariff("01.07.2019", 6222, 13499));
-			tariffs->Add(GasTariff("01.08.2019", 5912, 12432));
-			tariffs->Add(GasTariff("01.09.2019", 5714, 11834));
-			tariffs->Add(GasTariff("01.10.2019", 5455, 10892));
-			tariffs->Add(GasTariff("01.11.2019", 6214, 13982));
-			tariffs->Add(GasTariff("01.12.2019", 5449, 11024));
-			tariffs->Add(GasTariff("01.01.2020", 5868, 12418));
-			tariffs->Add(GasTariff("01.02.2020", 5005, 10043));
-			tariffs->Add(GasTariff("01.03.2020", 4326, 9212));
-			tariffs->Add(GasTariff("01.04.2020", 3712, 7832));
-			tariffs->Add(GasTariff("01.05.2020", 2948, 6286));
+			tariffs->Add(PriceRecord("01.05.2019", 7556, 15199));
+			tariffs->Add(PriceRecord("01.06.2019", 7020, 14855));
+			tariffs->Add(PriceRecord("01.07.2019", 6222, 13499));
+			tariffs->Add(PriceRecord("01.08.2019", 5912, 12432));
+			tariffs->Add(PriceRecord("01.09.2019", 5714, 11834));
+			tariffs->Add(PriceRecord("01.10.2019", 5455, 10892));
+			tariffs->Add(PriceRecord("01.11.2019", 6214, 13982));
+			tariffs->Add(PriceRecord("01.12.2019", 5449, 11024));
+			tariffs->Add(PriceRecord("01.01.2020", 5868, 12418));
+			tariffs->Add(PriceRecord("01.02.2020", 5005, 10043));
+			tariffs->Add(PriceRecord("01.03.2020", 4326, 9212));
+			tariffs->Add(PriceRecord("01.04.2020", 3712, 7832));
+			tariffs->Add(PriceRecord("01.05.2020", 2948, 6286));
 
         }
 
@@ -335,7 +325,7 @@ namespace Course4 {
 			}
 		}
 		private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e) {
-			GasTariff tariff;
+			PriceRecord tariff;
 
             auto monthNumber = comboBox2->SelectedIndex + 1;
 
@@ -347,7 +337,7 @@ namespace Course4 {
 			tariff.date += monthNumber.ToString();
 			tariff.date += "." + comboBox1->Text;
 
-            GasTariff item;
+            PriceRecord item;
             for (int i = 0; i < tariffs->Count; i++) {
                 item = tariffs[i];
 
