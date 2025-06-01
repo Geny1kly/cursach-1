@@ -19,15 +19,15 @@ namespace Course4 {
             if (components) delete components;
         }
 
-    private:
-        DataGridView^ dataGridView;
-    private: System::Windows::Forms::DataGridView^ dataGridView1;
-    private: System::Windows::Forms::Label^ label1;
-    private: System::Windows::Forms::Button^ button1;
-    private: System::Windows::Forms::ComboBox^ comboBox1;
-    private: System::Windows::Forms::ComboBox^ comboBox2;
-    private: System::Windows::Forms::Panel^ panel1;
-           System::ComponentModel::Container^ components;
+	private:
+		DataGridView^ dataGridView;
+	private: System::Windows::Forms::DataGridView^ dataGridView1;
+	private: System::Windows::Forms::Label^ label1;
+	private: System::Windows::Forms::Button^ button1;
+	private: System::Windows::Forms::ComboBox^ comboBox1;
+	private: System::Windows::Forms::ComboBox^ comboBox2;
+	private: System::Windows::Forms::Panel^ panel1;
+		   System::ComponentModel::Container^ components;
 
         void InitializeComponent(void)
         {
@@ -68,10 +68,15 @@ namespace Course4 {
             this->button1->TabIndex = 2;
             this->button1->Text = L"Choice";
             this->button1->UseVisualStyleBackColor = true;
+            this->button1->Click += gcnew System::EventHandler(this, &MyForm2::button1_Click);
             // 
             // comboBox1
             // 
             this->comboBox1->FormattingEnabled = true;
+            this->comboBox1->Items->AddRange(gcnew cli::array< System::Object^  >(13) {
+                L"All year", L"January", L"February", L"March",
+                    L"April", L"May", L"June", L"July", L"August", L"September", L"October", L"November", L"December"
+            });
             this->comboBox1->Location = System::Drawing::Point(664, 17);
             this->comboBox1->Name = L"comboBox1";
             this->comboBox1->Size = System::Drawing::Size(141, 37);
@@ -80,6 +85,10 @@ namespace Course4 {
             // comboBox2
             // 
             this->comboBox2->FormattingEnabled = true;
+            this->comboBox2->Items->AddRange(gcnew cli::array< System::Object^  >(7) {
+                L"2019", L"2020", L"2021", L"2022", L"2023", L"2024",
+                    L"2025"
+            });
             this->comboBox2->Location = System::Drawing::Point(823, 17);
             this->comboBox2->Name = L"comboBox2";
             this->comboBox2->Size = System::Drawing::Size(141, 37);
@@ -112,5 +121,20 @@ namespace Course4 {
             this->ResumeLayout(false);
 
         }
-    };
+	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
+
+		this->dataGridView1->Columns->Clear();
+		this->dataGridView1->Rows->Clear();
+
+		this->dataGridView1->ColumnCount = 8;
+		this->dataGridView1->Columns[0]->Name = "Month";
+		this->dataGridView1->Columns[1]->Name = "Tariff";
+		this->dataGridView1->Columns[2]->Name = "Tariff price cubic meter UAH";
+		this->dataGridView1->Columns[3]->Name = "Volume for accruals by cubic meter";
+		this->dataGridView1->Columns[4]->Name = "";
+		this->dataGridView1->Columns[5]->Name = "";
+		this->dataGridView1->Columns[6]->Name = "";
+		this->dataGridView1->Columns[7]->Name = "";
+	}
+};
 }

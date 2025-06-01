@@ -3,7 +3,6 @@
 #pragma once
 
 struct Record {
-
 	char tariff_plan[20];
 	float topic_price;
 	char discount[20];
@@ -19,13 +18,11 @@ struct Record {
 	float overpay;
 	char date_overpay[20];
 	char status[20];
-
 };
 	
 
 
 namespace Course4 {
-
 	using namespace System;
 	using namespace System::ComponentModel;
 	using namespace System::Collections;
@@ -98,7 +95,6 @@ namespace Course4 {
 	private: System::Windows::Forms::Label^ label13;
 	private: System::Windows::Forms::Label^ label14;
 	private: System::Windows::Forms::ListBox^ listBox12;
-
 	private: System::Windows::Forms::Button^ button8;
 	private: System::Windows::Forms::BindingSource^ bindingSource1;
 	private: System::Windows::Forms::StatusStrip^ statusStrip1;
@@ -110,7 +106,6 @@ namespace Course4 {
 	private: System::Windows::Forms::Label^ label16;
 	private: System::Windows::Forms::Label^ label15;
 	private: System::ComponentModel::IContainer^ components;
-
 
 	private:
 		/// <summary>

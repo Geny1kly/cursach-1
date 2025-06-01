@@ -1,4 +1,8 @@
 #pragma once
+#include <iostream>
+#include <fstream>
+#include <msclr/marshal_cppstd.h>
+#include <iostream>
 
 namespace Course4 {
 
@@ -20,7 +24,6 @@ namespace Course4 {
 			monthlyTariff = initialMonthlyTariff;
 			yearlyTariff = initialYearlyTariff;
         }
-
     };
     public ref class MyForm1 : public System::Windows::Forms::Form
     {
@@ -267,6 +270,31 @@ namespace Course4 {
 
         List<GasTariff>^ tariffs = gcnew List<GasTariff>();
 
+
+		void load_tariffs() {
+			std::ofstream outFile("tarrifs");
+
+            std::cout << "GAYYYYYYYYYYYYYYYYYYYYYYYYYYYy";
+
+            outFile.close();
+		}
+        void save_tariffs() {
+			std::ofstream outFile("tarrifs");
+
+            outFile << tariffs->Count;
+
+            GasTariff item;
+            for (int i = 0; i < tariffs->Count; i++) {
+                item = tariffs[i];
+
+                outFile << msclr::interop::marshal_as<std::string>(item.date);
+                outFile << item.monthlyTariff;
+                outFile << item.yearlyTariff;
+            }
+
+			outFile.close();
+        }
+
         void initalize_tariffs() {
 			tariffs->Add(GasTariff("01.05.2019", 7556, 15199));
 			tariffs->Add(GasTariff("01.06.2019", 7020, 14855));
@@ -281,7 +309,8 @@ namespace Course4 {
 			tariffs->Add(GasTariff("01.03.2020", 4326, 9212));
 			tariffs->Add(GasTariff("01.04.2020", 3712, 7832));
 			tariffs->Add(GasTariff("01.05.2020", 2948, 6286));
-
+            save_tariffs();
+            load_tariffs();
         }
 
 #pragma endregion
