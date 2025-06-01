@@ -292,7 +292,7 @@ namespace Course4 {
 			this->button2->Name = L"button2";
 			this->button2->Size = System::Drawing::Size(226, 44);
 			this->button2->TabIndex = 1;
-			this->button2->Text = L"History of pay";
+			this->button2->Text = L"Calculations";
 			this->button2->UseVisualStyleBackColor = true;
 			this->button2->Click += gcnew System::EventHandler(this, &MyForm::button2_Click);
 			// 
@@ -689,9 +689,9 @@ namespace Course4 {
 			// 
 			this->statusStrip1->ImageScalingSize = System::Drawing::Size(20, 20);
 			this->statusStrip1->Items->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(1) { this->toolStripStatusLabel1 });
-			this->statusStrip1->Location = System::Drawing::Point(0, 627);
+			this->statusStrip1->Location = System::Drawing::Point(0, 633);
 			this->statusStrip1->Name = L"statusStrip1";
-			this->statusStrip1->Size = System::Drawing::Size(1535, 26);
+			this->statusStrip1->Size = System::Drawing::Size(1532, 26);
 			this->statusStrip1->TabIndex = 7;
 			this->statusStrip1->Text = L"statusStrip1";
 			// 
@@ -699,7 +699,7 @@ namespace Course4 {
 			// 
 			this->toolStripStatusLabel1->BackColor = System::Drawing::SystemColors::ButtonFace;
 			this->toolStripStatusLabel1->Name = L"toolStripStatusLabel1";
-			this->toolStripStatusLabel1->Size = System::Drawing::Size(117, 20);
+			this->toolStripStatusLabel1->Size = System::Drawing::Size(117, 27);
 			this->toolStripStatusLabel1->Text = L"Made in Ukraine";
 			// 
 			// MyForm
@@ -707,7 +707,7 @@ namespace Course4 {
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackColor = System::Drawing::SystemColors::ControlDarkDark;
-			this->ClientSize = System::Drawing::Size(1535, 653);
+			this->ClientSize = System::Drawing::Size(1532, 659);
 			this->Controls->Add(this->statusStrip1);
 			this->Controls->Add(this->groupBox4);
 			this->Controls->Add(this->groupBox3);

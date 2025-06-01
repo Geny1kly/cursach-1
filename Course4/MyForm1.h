@@ -63,12 +63,12 @@ namespace Course4 {
 #pragma region Windows Form Designer generated code
         void InitializeComponent(void)
         {
-            System::Windows::Forms::DataVisualization::Charting::ChartArea^ chartArea3 = (gcnew System::Windows::Forms::DataVisualization::Charting::ChartArea());
-            System::Windows::Forms::DataVisualization::Charting::Legend^ legend3 = (gcnew System::Windows::Forms::DataVisualization::Charting::Legend());
-            System::Windows::Forms::DataVisualization::Charting::Series^ series3 = (gcnew System::Windows::Forms::DataVisualization::Charting::Series());
-            System::Windows::Forms::DataVisualization::Charting::ChartArea^ chartArea4 = (gcnew System::Windows::Forms::DataVisualization::Charting::ChartArea());
-            System::Windows::Forms::DataVisualization::Charting::Legend^ legend4 = (gcnew System::Windows::Forms::DataVisualization::Charting::Legend());
-            System::Windows::Forms::DataVisualization::Charting::Series^ series4 = (gcnew System::Windows::Forms::DataVisualization::Charting::Series());
+            System::Windows::Forms::DataVisualization::Charting::ChartArea^ chartArea1 = (gcnew System::Windows::Forms::DataVisualization::Charting::ChartArea());
+            System::Windows::Forms::DataVisualization::Charting::Legend^ legend1 = (gcnew System::Windows::Forms::DataVisualization::Charting::Legend());
+            System::Windows::Forms::DataVisualization::Charting::Series^ series1 = (gcnew System::Windows::Forms::DataVisualization::Charting::Series());
+            System::Windows::Forms::DataVisualization::Charting::ChartArea^ chartArea2 = (gcnew System::Windows::Forms::DataVisualization::Charting::ChartArea());
+            System::Windows::Forms::DataVisualization::Charting::Legend^ legend2 = (gcnew System::Windows::Forms::DataVisualization::Charting::Legend());
+            System::Windows::Forms::DataVisualization::Charting::Series^ series2 = (gcnew System::Windows::Forms::DataVisualization::Charting::Series());
             this->chart1old = (gcnew System::Windows::Forms::DataVisualization::Charting::Chart());
             this->dataGridView1 = (gcnew System::Windows::Forms::DataGridView());
             this->button1 = (gcnew System::Windows::Forms::Button());
@@ -91,16 +91,16 @@ namespace Course4 {
             // 
             // chart1old
             // 
-            chartArea3->Name = L"ChartArea1";
-            this->chart1old->ChartAreas->Add(chartArea3);
-            legend3->Name = L"Legend1";
-            this->chart1old->Legends->Add(legend3);
+            chartArea1->Name = L"ChartArea1";
+            this->chart1old->ChartAreas->Add(chartArea1);
+            legend1->Name = L"Legend1";
+            this->chart1old->Legends->Add(legend1);
             this->chart1old->Location = System::Drawing::Point(12, 12);
             this->chart1old->Name = L"chart1old";
-            series3->ChartArea = L"ChartArea1";
-            series3->Legend = L"Legend1";
-            series3->Name = L"Natural prices";
-            this->chart1old->Series->Add(series3);
+            series1->ChartArea = L"ChartArea1";
+            series1->Legend = L"Legend1";
+            series1->Name = L"Natural prices";
+            this->chart1old->Series->Add(series1);
             this->chart1old->Size = System::Drawing::Size(692, 409);
             this->chart1old->TabIndex = 0;
             this->chart1old->Text = L"chart1";
@@ -108,7 +108,7 @@ namespace Course4 {
             // dataGridView1
             // 
             this->dataGridView1->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
-            this->dataGridView1->Location = System::Drawing::Point(887, 12);
+            this->dataGridView1->Location = System::Drawing::Point(781, 12);
             this->dataGridView1->Name = L"dataGridView1";
             this->dataGridView1->RowHeadersWidth = 40;
             this->dataGridView1->RowTemplate->Height = 24;
@@ -214,7 +214,7 @@ namespace Course4 {
             this->panel1->Controls->Add(this->label4);
             this->panel1->Controls->Add(this->button1);
             this->panel1->Controls->Add(this->textBox1);
-            this->panel1->Location = System::Drawing::Point(596, 72);
+            this->panel1->Location = System::Drawing::Point(490, 72);
             this->panel1->Name = L"panel1";
             this->panel1->Size = System::Drawing::Size(273, 303);
             this->panel1->TabIndex = 11;
@@ -222,30 +222,31 @@ namespace Course4 {
             // panel2
             // 
             this->panel2->BackColor = System::Drawing::SystemColors::ButtonHighlight;
-            this->panel2->Location = System::Drawing::Point(666, 12);
+            this->panel2->Location = System::Drawing::Point(560, 12);
             this->panel2->Name = L"panel2";
             this->panel2->Size = System::Drawing::Size(215, 409);
             this->panel2->TabIndex = 12;
             // 
             // chart1
             // 
-            chartArea4->Name = L"ChartArea1";
-            this->chart1->ChartAreas->Add(chartArea4);
-            legend4->Name = L"Legend1";
-            this->chart1->Legends->Add(legend4);
-            this->chart1->Location = System::Drawing::Point(20, 12);
+            chartArea2->Name = L"ChartArea1";
+            this->chart1->ChartAreas->Add(chartArea2);
+            legend2->Name = L"Legend1";
+            this->chart1->Legends->Add(legend2);
+            this->chart1->Location = System::Drawing::Point(12, 12);
             this->chart1->Name = L"chart1";
-            series4->ChartArea = L"ChartArea1";
-            series4->Legend = L"Legend1";
-            series4->Name = L"Series1";
-            this->chart1->Series->Add(series4);
-            this->chart1->Size = System::Drawing::Size(669, 409);
+            series2->ChartArea = L"ChartArea1";
+            series2->Legend = L"Legend1";
+            series2->Name = L"Series1";
+            this->chart1->Series->Add(series2);
+            this->chart1->Size = System::Drawing::Size(575, 409);
             this->chart1->TabIndex = 13;
             this->chart1->Text = L"chart1";
             // 
             // MyForm1
             // 
-            this->ClientSize = System::Drawing::Size(1269, 436);
+            this->BackColor = System::Drawing::SystemColors::ControlDarkDark;
+            this->ClientSize = System::Drawing::Size(1162, 430);
             this->Controls->Add(this->panel1);
             this->Controls->Add(this->chart1);
             this->Controls->Add(this->dataGridView1);
