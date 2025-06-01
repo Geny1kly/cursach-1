@@ -39,9 +39,11 @@ namespace Course4 {
                 delete components;
             }
         }
+    private: System::Windows::Forms::DataVisualization::Charting::Chart^ chart1old;
+    protected:
 
     private:
-    private: System::Windows::Forms::DataVisualization::Charting::Chart^ chart1;
+
     private: System::Windows::Forms::DataGridView^ dataGridView1;
     private: System::Windows::Forms::Button^ button1;
     private: System::Windows::Forms::ComboBox^ comboBox1;
@@ -54,15 +56,20 @@ namespace Course4 {
     private: System::Windows::Forms::TextBox^ textBox1;
     private: System::Windows::Forms::Panel^ panel1;
     private: System::Windows::Forms::Panel^ panel2;
+    private: System::Windows::Forms::DataVisualization::Charting::Chart^ chart1;
+
     private: System::ComponentModel::Container^ components;
 
 #pragma region Windows Form Designer generated code
         void InitializeComponent(void)
         {
-            System::Windows::Forms::DataVisualization::Charting::ChartArea^ chartArea1 = (gcnew System::Windows::Forms::DataVisualization::Charting::ChartArea());
-            System::Windows::Forms::DataVisualization::Charting::Legend^ legend1 = (gcnew System::Windows::Forms::DataVisualization::Charting::Legend());
-            System::Windows::Forms::DataVisualization::Charting::Series^ series1 = (gcnew System::Windows::Forms::DataVisualization::Charting::Series());
-            this->chart1 = (gcnew System::Windows::Forms::DataVisualization::Charting::Chart());
+            System::Windows::Forms::DataVisualization::Charting::ChartArea^ chartArea3 = (gcnew System::Windows::Forms::DataVisualization::Charting::ChartArea());
+            System::Windows::Forms::DataVisualization::Charting::Legend^ legend3 = (gcnew System::Windows::Forms::DataVisualization::Charting::Legend());
+            System::Windows::Forms::DataVisualization::Charting::Series^ series3 = (gcnew System::Windows::Forms::DataVisualization::Charting::Series());
+            System::Windows::Forms::DataVisualization::Charting::ChartArea^ chartArea4 = (gcnew System::Windows::Forms::DataVisualization::Charting::ChartArea());
+            System::Windows::Forms::DataVisualization::Charting::Legend^ legend4 = (gcnew System::Windows::Forms::DataVisualization::Charting::Legend());
+            System::Windows::Forms::DataVisualization::Charting::Series^ series4 = (gcnew System::Windows::Forms::DataVisualization::Charting::Series());
+            this->chart1old = (gcnew System::Windows::Forms::DataVisualization::Charting::Chart());
             this->dataGridView1 = (gcnew System::Windows::Forms::DataGridView());
             this->button1 = (gcnew System::Windows::Forms::Button());
             this->comboBox1 = (gcnew System::Windows::Forms::ComboBox());
@@ -75,31 +82,33 @@ namespace Course4 {
             this->textBox1 = (gcnew System::Windows::Forms::TextBox());
             this->panel1 = (gcnew System::Windows::Forms::Panel());
             this->panel2 = (gcnew System::Windows::Forms::Panel());
-            (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->chart1))->BeginInit();
+            this->chart1 = (gcnew System::Windows::Forms::DataVisualization::Charting::Chart());
+            (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->chart1old))->BeginInit();
             (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->BeginInit();
             this->panel1->SuspendLayout();
+            (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->chart1))->BeginInit();
             this->SuspendLayout();
             // 
-            // chart1
+            // chart1old
             // 
-            chartArea1->Name = L"ChartArea1";
-            this->chart1->ChartAreas->Add(chartArea1);
-            legend1->Name = L"Legend1";
-            this->chart1->Legends->Add(legend1);
-            this->chart1->Location = System::Drawing::Point(12, 12);
-            this->chart1->Name = L"chart1";
-            series1->ChartArea = L"ChartArea1";
-            series1->Legend = L"Legend1";
-            series1->Name = L"Natural prices";
-            this->chart1->Series->Add(series1);
-            this->chart1->Size = System::Drawing::Size(692, 409);
-            this->chart1->TabIndex = 0;
-            this->chart1->Text = L"chart1";
+            chartArea3->Name = L"ChartArea1";
+            this->chart1old->ChartAreas->Add(chartArea3);
+            legend3->Name = L"Legend1";
+            this->chart1old->Legends->Add(legend3);
+            this->chart1old->Location = System::Drawing::Point(12, 12);
+            this->chart1old->Name = L"chart1old";
+            series3->ChartArea = L"ChartArea1";
+            series3->Legend = L"Legend1";
+            series3->Name = L"Natural prices";
+            this->chart1old->Series->Add(series3);
+            this->chart1old->Size = System::Drawing::Size(692, 409);
+            this->chart1old->TabIndex = 0;
+            this->chart1old->Text = L"chart1";
             // 
             // dataGridView1
             // 
             this->dataGridView1->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
-            this->dataGridView1->Location = System::Drawing::Point(897, 12);
+            this->dataGridView1->Location = System::Drawing::Point(887, 12);
             this->dataGridView1->Name = L"dataGridView1";
             this->dataGridView1->RowHeadersWidth = 40;
             this->dataGridView1->RowTemplate->Height = 24;
@@ -218,20 +227,38 @@ namespace Course4 {
             this->panel2->Size = System::Drawing::Size(215, 409);
             this->panel2->TabIndex = 12;
             // 
+            // chart1
+            // 
+            chartArea4->Name = L"ChartArea1";
+            this->chart1->ChartAreas->Add(chartArea4);
+            legend4->Name = L"Legend1";
+            this->chart1->Legends->Add(legend4);
+            this->chart1->Location = System::Drawing::Point(20, 12);
+            this->chart1->Name = L"chart1";
+            series4->ChartArea = L"ChartArea1";
+            series4->Legend = L"Legend1";
+            series4->Name = L"Series1";
+            this->chart1->Series->Add(series4);
+            this->chart1->Size = System::Drawing::Size(669, 409);
+            this->chart1->TabIndex = 13;
+            this->chart1->Text = L"chart1";
+            // 
             // MyForm1
             // 
-            this->ClientSize = System::Drawing::Size(1275, 435);
+            this->ClientSize = System::Drawing::Size(1269, 436);
             this->Controls->Add(this->panel1);
+            this->Controls->Add(this->chart1);
             this->Controls->Add(this->dataGridView1);
             this->Controls->Add(this->panel2);
             this->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
             this->Name = L"MyForm1";
             this->Text = L"N pricecs";
-            (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->chart1))->EndInit();
+            (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->chart1old))->EndInit();
             (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->EndInit();
             this->panel1->ResumeLayout(false);
             this->panel1->PerformLayout();
+            (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->chart1))->EndInit();
             this->ResumeLayout(false);
 
         }
