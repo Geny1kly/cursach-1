@@ -129,12 +129,12 @@ namespace Course4 {
 		this->dataGridView1->ColumnCount = 8;
 		this->dataGridView1->Columns[0]->Name = "Month";
 		this->dataGridView1->Columns[1]->Name = "Tariff";
-		this->dataGridView1->Columns[2]->Name = "Tariff price cubic meter UAH";
-		this->dataGridView1->Columns[3]->Name = "Volume for accruals by cubic meter";
-		this->dataGridView1->Columns[4]->Name = "";
-		this->dataGridView1->Columns[5]->Name = "";
-		this->dataGridView1->Columns[6]->Name = "";
-		this->dataGridView1->Columns[7]->Name = "";
+		this->dataGridView1->Columns[2]->Name = "Tariff price\ncubic meter ";
+		this->dataGridView1->Columns[3]->Name = "Volume for accruals\ncubic meter";
+		this->dataGridView1->Columns[4]->Name = "Account balance\nbeginning of the month";
+		this->dataGridView1->Columns[5]->Name = "Accrual for the account";
+		this->dataGridView1->Columns[6]->Name = "Paid";
+		this->dataGridView1->Columns[7]->Name = "Account balance\nend of the month";
 	}
 };
 }
