@@ -2,24 +2,6 @@
 #include "MyForm2.h"
 #pragma once
 
-struct Record {
-	char tariff_plan[20];
-	float topic_price;
-	char discount[20];
-	char period_plan[50];
-	char name_owner[100];
-	char eic_code[40];
-	char adr_oblast[50];
-	char adr_city[30];
-	char adr_address[50];
-	char adr_home[20];
-	char subsides[5];
-	float overpay;
-	char date_overpay[20];
-};
-	
-
-
 namespace Course4 {
 	using namespace System;
 	using namespace System::ComponentModel;
@@ -27,6 +9,22 @@ namespace Course4 {
 	using namespace System::Windows::Forms;
 	using namespace System::Data;
 	using namespace System::Drawing;
+		
+	struct HeadRecord {
+		char tariff_plan[20];
+		float topic_price;
+		char discount[20];
+		char period_plan[50];
+		char name_owner[100];
+		char eic_code[40];
+		char adr_oblast[50];
+		char adr_city[30];
+		char adr_address[50];
+		char adr_home[20];
+		char subsides[5];
+		float overpay;
+		char date_overpay[20];
+	};
 
 	/// <summary>
 	/// Summary for MyForm
@@ -57,7 +55,7 @@ namespace Course4 {
 	protected:
 	private: System::Windows::Forms::Button^ button2;
 	private: System::Windows::Forms::Button^ button1;
-	private: System::Windows::Forms::Button^ button3;
+
 	private: System::Windows::Forms::ComboBox^ comboBox1;
 	private: System::Windows::Forms::Button^ button5;
 	private: System::Windows::Forms::Button^ button4;
@@ -75,18 +73,11 @@ namespace Course4 {
 	private: System::Windows::Forms::GroupBox^ groupBox3;
 	private: System::Windows::Forms::Label^ label6;
 	private: System::Windows::Forms::Label^ label8;
-
 	private: System::Windows::Forms::Label^ label9;
 	private: System::Windows::Forms::Label^ label10;
 	private: System::Windows::Forms::ListBox^ listBox5;
 	private: System::Windows::Forms::ListBox^ listBox6;
 	private: System::Windows::Forms::ListBox^ listBox7;
-
-
-
-
-
-
 	private: System::Windows::Forms::GroupBox^ groupBox4;
 	private: System::Windows::Forms::Button^ button7;
 	private: System::Windows::Forms::TextBox^ textBox1;
@@ -94,38 +85,27 @@ namespace Course4 {
 	private: System::Windows::Forms::Label^ label12;
 	private: System::Windows::Forms::ListBox^ listBox8;
 	private: System::Windows::Forms::ListBox^ listBox9;
-
-
-
-
-
 	private: System::Windows::Forms::Label^ label13;
 	private: System::Windows::Forms::ListBox^ listBox10;
-
-
-
 	private: System::Windows::Forms::Button^ button8;
 	private: System::Windows::Forms::BindingSource^ bindingSource1;
 	private: System::Windows::Forms::StatusStrip^ statusStrip1;
 	private: System::Windows::Forms::ToolStripStatusLabel^ toolStripStatusLabel1;
 	private: System::Windows::Forms::ListBox^ listBox11;
 	private: System::Windows::Forms::ListBox^ listBox13;
-
-
-
 	private: System::Windows::Forms::ListBox^ listBox12;
-
-
 	private: System::Windows::Forms::Label^ label18;
 	private: System::Windows::Forms::Label^ label16;
 	private: System::Windows::Forms::Label^ label15;
+	private: System::Windows::Forms::Panel^ panel1;
+	private: System::Windows::Forms::Label^ label7;
 	private: System::ComponentModel::IContainer^ components;
 
 	private:
 		/// <summary>
 		/// Required designer variable.
 		/// </summary>
-		void Filing_ListBoxes_by_Data(Record data[], int h, array<ListBox^>^ listBoxes) {
+		void Filing_ListBoxes_by_Data(HeadRecord data[], int h, array<ListBox^>^ listBoxes) {
 		
 		array<String^>^ rec_data = gcnew array<String^> {
 
@@ -160,7 +140,6 @@ namespace Course4 {
 			this->button6 = (gcnew System::Windows::Forms::Button());
 			this->button5 = (gcnew System::Windows::Forms::Button());
 			this->button4 = (gcnew System::Windows::Forms::Button());
-			this->button3 = (gcnew System::Windows::Forms::Button());
 			this->comboBox1 = (gcnew System::Windows::Forms::ComboBox());
 			this->button2 = (gcnew System::Windows::Forms::Button());
 			this->button1 = (gcnew System::Windows::Forms::Button());
@@ -177,18 +156,20 @@ namespace Course4 {
 			this->label3 = (gcnew System::Windows::Forms::Label());
 			this->label2 = (gcnew System::Windows::Forms::Label());
 			this->groupBox3 = (gcnew System::Windows::Forms::GroupBox());
-			this->label18 = (gcnew System::Windows::Forms::Label());
-			this->label16 = (gcnew System::Windows::Forms::Label());
-			this->label15 = (gcnew System::Windows::Forms::Label());
-			this->listBox11 = (gcnew System::Windows::Forms::ListBox());
-			this->listBox9 = (gcnew System::Windows::Forms::ListBox());
-			this->listBox10 = (gcnew System::Windows::Forms::ListBox());
 			this->listBox7 = (gcnew System::Windows::Forms::ListBox());
-			this->listBox8 = (gcnew System::Windows::Forms::ListBox());
 			this->listBox6 = (gcnew System::Windows::Forms::ListBox());
-			this->label9 = (gcnew System::Windows::Forms::Label());
 			this->label8 = (gcnew System::Windows::Forms::Label());
 			this->label6 = (gcnew System::Windows::Forms::Label());
+			this->panel1 = (gcnew System::Windows::Forms::Panel());
+			this->listBox11 = (gcnew System::Windows::Forms::ListBox());
+			this->label18 = (gcnew System::Windows::Forms::Label());
+			this->listBox9 = (gcnew System::Windows::Forms::ListBox());
+			this->label7 = (gcnew System::Windows::Forms::Label());
+			this->listBox10 = (gcnew System::Windows::Forms::ListBox());
+			this->label16 = (gcnew System::Windows::Forms::Label());
+			this->label9 = (gcnew System::Windows::Forms::Label());
+			this->listBox8 = (gcnew System::Windows::Forms::ListBox());
+			this->label15 = (gcnew System::Windows::Forms::Label());
 			this->groupBox4 = (gcnew System::Windows::Forms::GroupBox());
 			this->listBox13 = (gcnew System::Windows::Forms::ListBox());
 			this->listBox12 = (gcnew System::Windows::Forms::ListBox());
@@ -203,6 +184,7 @@ namespace Course4 {
 			this->groupBox1->SuspendLayout();
 			this->groupBox2->SuspendLayout();
 			this->groupBox3->SuspendLayout();
+			this->panel1->SuspendLayout();
 			this->groupBox4->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->bindingSource1))->BeginInit();
 			this->statusStrip1->SuspendLayout();
@@ -215,7 +197,6 @@ namespace Course4 {
 			this->groupBox1->Controls->Add(this->button6);
 			this->groupBox1->Controls->Add(this->button5);
 			this->groupBox1->Controls->Add(this->button4);
-			this->groupBox1->Controls->Add(this->button3);
 			this->groupBox1->Controls->Add(this->comboBox1);
 			this->groupBox1->Controls->Add(this->button2);
 			this->groupBox1->Controls->Add(this->button1);
@@ -224,14 +205,14 @@ namespace Course4 {
 				static_cast<System::Byte>(0)));
 			this->groupBox1->Location = System::Drawing::Point(12, 17);
 			this->groupBox1->Name = L"groupBox1";
-			this->groupBox1->Size = System::Drawing::Size(273, 520);
+			this->groupBox1->Size = System::Drawing::Size(273, 530);
 			this->groupBox1->TabIndex = 0;
 			this->groupBox1->TabStop = false;
 			this->groupBox1->Text = L"Menu";
 			// 
 			// button8
 			// 
-			this->button8->Location = System::Drawing::Point(21, 147);
+			this->button8->Location = System::Drawing::Point(20, 204);
 			this->button8->Name = L"button8";
 			this->button8->Size = System::Drawing::Size(226, 44);
 			this->button8->TabIndex = 5;
@@ -270,28 +251,18 @@ namespace Course4 {
 			this->button4->UseVisualStyleBackColor = true;
 			this->button4->Click += gcnew System::EventHandler(this, &MyForm::button4_Click);
 			// 
-			// button3
-			// 
-			this->button3->Location = System::Drawing::Point(20, 276);
-			this->button3->Name = L"button3";
-			this->button3->Size = System::Drawing::Size(226, 40);
-			this->button3->TabIndex = 2;
-			this->button3->Text = L"History of used";
-			this->button3->UseVisualStyleBackColor = true;
-			this->button3->Click += gcnew System::EventHandler(this, &MyForm::button3_Click);
-			// 
 			// comboBox1
 			// 
 			this->comboBox1->FormattingEnabled = true;
 			this->comboBox1->Items->AddRange(gcnew cli::array< System::Object^  >(3) { L"Gas", L"Water", L"Energy" });
-			this->comboBox1->Location = System::Drawing::Point(106, 41);
+			this->comboBox1->Location = System::Drawing::Point(106, 61);
 			this->comboBox1->Name = L"comboBox1";
 			this->comboBox1->Size = System::Drawing::Size(141, 37);
 			this->comboBox1->TabIndex = 1;
 			// 
 			// button2
 			// 
-			this->button2->Location = System::Drawing::Point(20, 212);
+			this->button2->Location = System::Drawing::Point(19, 269);
 			this->button2->Name = L"button2";
 			this->button2->Size = System::Drawing::Size(226, 44);
 			this->button2->TabIndex = 1;
@@ -302,7 +273,7 @@ namespace Course4 {
 			// button1
 			// 
 			this->button1->BackColor = System::Drawing::Color::DarkSeaGreen;
-			this->button1->Location = System::Drawing::Point(20, 84);
+			this->button1->Location = System::Drawing::Point(21, 104);
 			this->button1->Name = L"button1";
 			this->button1->Size = System::Drawing::Size(226, 40);
 			this->button1->TabIndex = 0;
@@ -313,7 +284,7 @@ namespace Course4 {
 			// label1
 			// 
 			this->label1->AutoSize = true;
-			this->label1->Location = System::Drawing::Point(26, 43);
+			this->label1->Location = System::Drawing::Point(26, 63);
 			this->label1->Name = L"label1";
 			this->label1->Size = System::Drawing::Size(74, 29);
 			this->label1->TabIndex = 1;
@@ -336,7 +307,7 @@ namespace Course4 {
 				static_cast<System::Byte>(0)));
 			this->groupBox2->Location = System::Drawing::Point(304, 139);
 			this->groupBox2->Name = L"groupBox2";
-			this->groupBox2->Size = System::Drawing::Size(561, 398);
+			this->groupBox2->Size = System::Drawing::Size(567, 408);
 			this->groupBox2->TabIndex = 1;
 			this->groupBox2->TabStop = false;
 			this->groupBox2->Text = L"My conditions";
@@ -434,82 +405,19 @@ namespace Course4 {
 			// groupBox3
 			// 
 			this->groupBox3->BackColor = System::Drawing::SystemColors::ControlLight;
-			this->groupBox3->Controls->Add(this->label18);
-			this->groupBox3->Controls->Add(this->label16);
-			this->groupBox3->Controls->Add(this->label15);
-			this->groupBox3->Controls->Add(this->listBox11);
-			this->groupBox3->Controls->Add(this->listBox9);
-			this->groupBox3->Controls->Add(this->listBox10);
 			this->groupBox3->Controls->Add(this->listBox7);
-			this->groupBox3->Controls->Add(this->listBox8);
 			this->groupBox3->Controls->Add(this->listBox6);
-			this->groupBox3->Controls->Add(this->label9);
 			this->groupBox3->Controls->Add(this->label8);
 			this->groupBox3->Controls->Add(this->label6);
+			this->groupBox3->Controls->Add(this->panel1);
 			this->groupBox3->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->groupBox3->Location = System::Drawing::Point(886, 139);
 			this->groupBox3->Name = L"groupBox3";
-			this->groupBox3->Size = System::Drawing::Size(632, 398);
+			this->groupBox3->Size = System::Drawing::Size(640, 408);
 			this->groupBox3->TabIndex = 2;
 			this->groupBox3->TabStop = false;
 			this->groupBox3->Text = L"My info";
-			// 
-			// label18
-			// 
-			this->label18->AutoSize = true;
-			this->label18->Location = System::Drawing::Point(28, 337);
-			this->label18->Name = L"label18";
-			this->label18->Size = System::Drawing::Size(78, 29);
-			this->label18->TabIndex = 14;
-			this->label18->Text = L"Home";
-			// 
-			// label16
-			// 
-			this->label16->AutoSize = true;
-			this->label16->Location = System::Drawing::Point(28, 286);
-			this->label16->Name = L"label16";
-			this->label16->Size = System::Drawing::Size(102, 29);
-			this->label16->TabIndex = 12;
-			this->label16->Text = L"Address";
-			// 
-			// label15
-			// 
-			this->label15->AutoSize = true;
-			this->label15->Location = System::Drawing::Point(28, 235);
-			this->label15->Name = L"label15";
-			this->label15->Size = System::Drawing::Size(53, 29);
-			this->label15->TabIndex = 11;
-			this->label15->Text = L"City";
-			// 
-			// listBox11
-			// 
-			this->listBox11->FormattingEnabled = true;
-			this->listBox11->ItemHeight = 29;
-			this->listBox11->Location = System::Drawing::Point(271, 333);
-			this->listBox11->Name = L"listBox11";
-			this->listBox11->Size = System::Drawing::Size(342, 33);
-			this->listBox11->TabIndex = 10;
-			// 
-			// listBox9
-			// 
-			this->listBox9->FormattingEnabled = true;
-			this->listBox9->ItemHeight = 29;
-			this->listBox9->Location = System::Drawing::Point(271, 231);
-			this->listBox9->Name = L"listBox9";
-			this->listBox9->Size = System::Drawing::Size(342, 33);
-			this->listBox9->TabIndex = 7;
-			// 
-			// listBox10
-			// 
-			this->listBox10->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->listBox10->FormattingEnabled = true;
-			this->listBox10->ItemHeight = 29;
-			this->listBox10->Location = System::Drawing::Point(271, 282);
-			this->listBox10->Name = L"listBox10";
-			this->listBox10->Size = System::Drawing::Size(342, 33);
-			this->listBox10->TabIndex = 5;
 			// 
 			// listBox7
 			// 
@@ -520,15 +428,6 @@ namespace Course4 {
 			this->listBox7->Size = System::Drawing::Size(342, 33);
 			this->listBox7->TabIndex = 9;
 			// 
-			// listBox8
-			// 
-			this->listBox8->FormattingEnabled = true;
-			this->listBox8->ItemHeight = 29;
-			this->listBox8->Location = System::Drawing::Point(271, 183);
-			this->listBox8->Name = L"listBox8";
-			this->listBox8->Size = System::Drawing::Size(342, 33);
-			this->listBox8->TabIndex = 5;
-			// 
 			// listBox6
 			// 
 			this->listBox6->FormattingEnabled = true;
@@ -537,15 +436,6 @@ namespace Course4 {
 			this->listBox6->Name = L"listBox6";
 			this->listBox6->Size = System::Drawing::Size(342, 33);
 			this->listBox6->TabIndex = 7;
-			// 
-			// label9
-			// 
-			this->label9->AutoSize = true;
-			this->label9->Location = System::Drawing::Point(28, 187);
-			this->label9->Name = L"label9";
-			this->label9->Size = System::Drawing::Size(83, 29);
-			this->label9->TabIndex = 3;
-			this->label9->Text = L"Oblast";
 			// 
 			// label8
 			// 
@@ -565,6 +455,106 @@ namespace Course4 {
 			this->label6->TabIndex = 0;
 			this->label6->Text = L"Owner of account";
 			// 
+			// panel1
+			// 
+			this->panel1->BackColor = System::Drawing::Color::FloralWhite;
+			this->panel1->Controls->Add(this->listBox11);
+			this->panel1->Controls->Add(this->label18);
+			this->panel1->Controls->Add(this->listBox9);
+			this->panel1->Controls->Add(this->label7);
+			this->panel1->Controls->Add(this->listBox10);
+			this->panel1->Controls->Add(this->label16);
+			this->panel1->Controls->Add(this->label9);
+			this->panel1->Controls->Add(this->listBox8);
+			this->panel1->Controls->Add(this->label15);
+			this->panel1->Location = System::Drawing::Point(16, 164);
+			this->panel1->Name = L"panel1";
+			this->panel1->Size = System::Drawing::Size(611, 232);
+			this->panel1->TabIndex = 15;
+			// 
+			// listBox11
+			// 
+			this->listBox11->FormattingEnabled = true;
+			this->listBox11->ItemHeight = 29;
+			this->listBox11->Location = System::Drawing::Point(256, 186);
+			this->listBox11->Name = L"listBox11";
+			this->listBox11->Size = System::Drawing::Size(342, 33);
+			this->listBox11->TabIndex = 10;
+			// 
+			// label18
+			// 
+			this->label18->AutoSize = true;
+			this->label18->Location = System::Drawing::Point(30, 190);
+			this->label18->Name = L"label18";
+			this->label18->Size = System::Drawing::Size(78, 29);
+			this->label18->TabIndex = 14;
+			this->label18->Text = L"Home";
+			// 
+			// listBox9
+			// 
+			this->listBox9->FormattingEnabled = true;
+			this->listBox9->ItemHeight = 29;
+			this->listBox9->Location = System::Drawing::Point(256, 84);
+			this->listBox9->Name = L"listBox9";
+			this->listBox9->Size = System::Drawing::Size(342, 33);
+			this->listBox9->TabIndex = 7;
+			// 
+			// label7
+			// 
+			this->label7->AutoSize = true;
+			this->label7->Location = System::Drawing::Point(24, 0);
+			this->label7->Name = L"label7";
+			this->label7->Size = System::Drawing::Size(108, 29);
+			this->label7->TabIndex = 0;
+			this->label7->Text = L"Address:";
+			// 
+			// listBox10
+			// 
+			this->listBox10->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->listBox10->FormattingEnabled = true;
+			this->listBox10->ItemHeight = 29;
+			this->listBox10->Location = System::Drawing::Point(256, 135);
+			this->listBox10->Name = L"listBox10";
+			this->listBox10->Size = System::Drawing::Size(342, 33);
+			this->listBox10->TabIndex = 5;
+			// 
+			// label16
+			// 
+			this->label16->AutoSize = true;
+			this->label16->Location = System::Drawing::Point(30, 139);
+			this->label16->Name = L"label16";
+			this->label16->Size = System::Drawing::Size(76, 29);
+			this->label16->TabIndex = 12;
+			this->label16->Text = L"Streat";
+			// 
+			// label9
+			// 
+			this->label9->AutoSize = true;
+			this->label9->Location = System::Drawing::Point(30, 42);
+			this->label9->Name = L"label9";
+			this->label9->Size = System::Drawing::Size(83, 29);
+			this->label9->TabIndex = 3;
+			this->label9->Text = L"Oblast";
+			// 
+			// listBox8
+			// 
+			this->listBox8->FormattingEnabled = true;
+			this->listBox8->ItemHeight = 29;
+			this->listBox8->Location = System::Drawing::Point(256, 38);
+			this->listBox8->Name = L"listBox8";
+			this->listBox8->Size = System::Drawing::Size(342, 33);
+			this->listBox8->TabIndex = 5;
+			// 
+			// label15
+			// 
+			this->label15->AutoSize = true;
+			this->label15->Location = System::Drawing::Point(30, 88);
+			this->label15->Name = L"label15";
+			this->label15->Size = System::Drawing::Size(53, 29);
+			this->label15->TabIndex = 11;
+			this->label15->Text = L"City";
+			// 
 			// groupBox4
 			// 
 			this->groupBox4->BackColor = System::Drawing::Color::LightSteelBlue;
@@ -579,7 +569,7 @@ namespace Course4 {
 				static_cast<System::Byte>(0)));
 			this->groupBox4->Location = System::Drawing::Point(304, 17);
 			this->groupBox4->Name = L"groupBox4";
-			this->groupBox4->Size = System::Drawing::Size(1214, 109);
+			this->groupBox4->Size = System::Drawing::Size(1222, 109);
 			this->groupBox4->TabIndex = 3;
 			this->groupBox4->TabStop = false;
 			this->groupBox4->Text = L"Payment";
@@ -588,7 +578,7 @@ namespace Course4 {
 			// 
 			this->listBox13->FormattingEnabled = true;
 			this->listBox13->ItemHeight = 29;
-			this->listBox13->Location = System::Drawing::Point(984, 42);
+			this->listBox13->Location = System::Drawing::Point(1014, 42);
 			this->listBox13->Name = L"listBox13";
 			this->listBox13->Size = System::Drawing::Size(186, 33);
 			this->listBox13->TabIndex = 12;
@@ -597,7 +587,7 @@ namespace Course4 {
 			// 
 			this->listBox12->FormattingEnabled = true;
 			this->listBox12->ItemHeight = 29;
-			this->listBox12->Location = System::Drawing::Point(763, 42);
+			this->listBox12->Location = System::Drawing::Point(793, 42);
 			this->listBox12->Name = L"listBox12";
 			this->listBox12->Size = System::Drawing::Size(169, 33);
 			this->listBox12->TabIndex = 11;
@@ -605,16 +595,16 @@ namespace Course4 {
 			// label13
 			// 
 			this->label13->AutoSize = true;
-			this->label13->Location = System::Drawing::Point(592, 43);
+			this->label13->Location = System::Drawing::Point(577, 43);
 			this->label13->Name = L"label13";
-			this->label13->Size = System::Drawing::Size(156, 29);
+			this->label13->Size = System::Drawing::Size(210, 29);
 			this->label13->TabIndex = 6;
-			this->label13->Text = L"Overpayment";
+			this->label13->Text = L"Status of balancee";
 			// 
 			// label12
 			// 
 			this->label12->AutoSize = true;
-			this->label12->Location = System::Drawing::Point(938, 46);
+			this->label12->Location = System::Drawing::Point(968, 43);
 			this->label12->Name = L"label12";
 			this->label12->Size = System::Drawing::Size(40, 29);
 			this->label12->TabIndex = 4;
@@ -650,9 +640,9 @@ namespace Course4 {
 			// 
 			this->statusStrip1->ImageScalingSize = System::Drawing::Size(20, 20);
 			this->statusStrip1->Items->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(1) { this->toolStripStatusLabel1 });
-			this->statusStrip1->Location = System::Drawing::Point(0, 553);
+			this->statusStrip1->Location = System::Drawing::Point(0, 558);
 			this->statusStrip1->Name = L"statusStrip1";
-			this->statusStrip1->Size = System::Drawing::Size(1532, 26);
+			this->statusStrip1->Size = System::Drawing::Size(1538, 26);
 			this->statusStrip1->TabIndex = 7;
 			this->statusStrip1->Text = L"statusStrip1";
 			// 
@@ -668,20 +658,22 @@ namespace Course4 {
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackColor = System::Drawing::SystemColors::ControlDarkDark;
-			this->ClientSize = System::Drawing::Size(1532, 579);
+			this->ClientSize = System::Drawing::Size(1538, 584);
 			this->Controls->Add(this->statusStrip1);
 			this->Controls->Add(this->groupBox4);
 			this->Controls->Add(this->groupBox3);
 			this->Controls->Add(this->groupBox2);
 			this->Controls->Add(this->groupBox1);
 			this->Name = L"MyForm";
-			this->Text = L"Communal Utilites";
+			this->Text = L"  ";
 			this->groupBox1->ResumeLayout(false);
 			this->groupBox1->PerformLayout();
 			this->groupBox2->ResumeLayout(false);
 			this->groupBox2->PerformLayout();
 			this->groupBox3->ResumeLayout(false);
 			this->groupBox3->PerformLayout();
+			this->panel1->ResumeLayout(false);
+			this->panel1->PerformLayout();
 			this->groupBox4->ResumeLayout(false);
 			this->groupBox4->PerformLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->bindingSource1))->EndInit();
@@ -714,7 +706,7 @@ namespace Course4 {
 
 		for each (ListBox^ lb in listBoxes) lb->Items->Clear();
 
-		Record data[] = {
+		HeadRecord data[] = {
 			{ "Fixed", 7.95689f, "Not provided", "01.05.2024 -- 30.04.2025", 
 			"Fadyev Anton Pertrovich", "144EB551656XM20B5", "Khmel'nyts'ka", 
 			"Khmel'nyts'kyi", "Kam'yanets'ka 910", "Room 71", "Yes", 6.15f, "15.11.2024" },
@@ -735,7 +727,7 @@ namespace Course4 {
 
 		case 1:
 			Filing_ListBoxes_by_Data(data, 1, listBoxes);
-			break;
+			break; 
 
 		case 2:
 			Filing_ListBoxes_by_Data(data, 2, listBoxes);
@@ -749,9 +741,6 @@ namespace Course4 {
 	private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e) {
 		MyForm2^ form1 = gcnew MyForm2();
 		form1->Show();
-	}
-
-	private: System::Void button3_Click(System::Object^ sender, System::EventArgs^ e) {
 	}
 
 	private: System::Void button4_Click(System::Object^ sender, System::EventArgs^ e) {

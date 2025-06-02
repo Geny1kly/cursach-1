@@ -5,6 +5,18 @@ namespace Course4 {
     using namespace System;
     using namespace System::Windows::Forms;
 
+    struct BalanceRecord {
+        int month;
+        int plan_tariff;
+
+        float tariff_price;
+        float volume_accurals;
+        float balance_begin_month;
+        float accrual_balance;
+        float paid;
+        float balance_end_month;
+    };
+
     public ref class MyForm2 : public Form
     {
     public:
@@ -121,7 +133,24 @@ namespace Course4 {
             this->ResumeLayout(false);
 
         }
+
 	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
+
+
+        BalanceRecord info[] = {
+            { 12, 1, 4.73f, 67.83f, -49.17f, 320.57f, 367.85f, 0 },
+            { 11, 1, 4.73f, 67.83f, -1.89f, 320.57f, 367.85f, -49.17f },
+            { 10, 1, 4.73f, 67.83f, 45.39f, 320.57f, 367.85f, -1.89f },
+            { 9, 2, 4.65f, 10.00f, 129.50f, 46.48f, 130.60f, 45.39f },
+            { 8, 2, 3.24f, 40.00f, 86.27f, 129.66f, 86.42f, 129.50 },
+            { 7, 2, 2.97f, 29.83f, 50.51f, 86.27f, 50.51f, 86.27 },
+            { 6, 2, 2.78f, 30.00f, -32.01f, 83.52f, 1.00f, 50.51f },
+            { 5, 2, 2.95f, 26.00f, -108.67f, 76.65f, 0.00f, -32.01f },
+            { 4, 2, 3.71f, 20.00f, -181.91f, 74.25f, 1.00f, -108.67f },
+            { 3, 2, 4.33f, 120.00f, 2296.72f, 519.13f, 2997.76f, -181.91f },
+            { 2, 2, 5.01f, 150.00f, 1545.97f, 750.75f, 0.00f, 2296.72 },
+            { 1, 2, 4.73f, 5.87f, 150.00f, 783.80f, 880.27f, 1545.97f },
+        };
 
 		this->dataGridView1->Columns->Clear();
 		this->dataGridView1->Rows->Clear();
@@ -135,6 +164,14 @@ namespace Course4 {
 		this->dataGridView1->Columns[5]->Name = "Accrual for the account";
 		this->dataGridView1->Columns[6]->Name = "Paid";
 		this->dataGridView1->Columns[7]->Name = "Account balance\nend of the month";
+
+        for (int i = 0; i < 8; i++) {
+			this->dataGridView1->Rows->Add(
+				info[i].month.ToString(), info[i].plan_tariff.ToString(),
+				info[i].tariff_price.ToString("F2"), info[i].volume_accurals.ToString("F2"),
+				info[i].balance_begin_month.ToString("F2"), info[i].accrual_balance.ToString("F2"),
+				info[i].paid.ToString("F2"), info[i].balance_end_month.ToString("F2"));
+		}
 	}
 };
 }
