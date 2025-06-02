@@ -1,5 +1,6 @@
 #include "MyForm1.h"
 #include "MyForm2.h"
+#include "MyForm3.h"
 #pragma once
 
 namespace Course4 {
@@ -758,6 +759,8 @@ namespace Course4 {
 	}
 
 	private: System::Void button8_Click(System::Object^ sender, System::EventArgs^ e) {
+		MyForm3^ form3 = gcnew MyForm3();
+		form3->Show();
 	}
 };
 }
